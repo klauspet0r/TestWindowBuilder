@@ -48,23 +48,26 @@ public class MainWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 416, 226);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblEnterEwsConnection = new JLabel("Enter EWS connection info");
-		lblEnterEwsConnection.setBounds(15, 16, 207, 20);
+		lblEnterEwsConnection.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblEnterEwsConnection.setBounds(15, 16, 243, 20);
 		frame.getContentPane().add(lblEnterEwsConnection);
 		
 		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		txtUsername.setText("username");
-		txtUsername.setBounds(15, 52, 146, 26);
+		txtUsername.setBounds(15, 52, 316, 43);
 		frame.getContentPane().add(txtUsername);
 		txtUsername.setColumns(10);
 		
 		pwdPassword = new JPasswordField();
+		pwdPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		pwdPassword.setText("password");
-		pwdPassword.setBounds(15, 87, 146, 26);
+		pwdPassword.setBounds(15, 111, 316, 43);
 		frame.getContentPane().add(pwdPassword);
 	}
 }
