@@ -13,6 +13,10 @@ import com.jgoodies.forms.layout.RowSpec;
 import java.awt.GridLayout;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Window.Type;
 
 public class MainWindow {
 
@@ -48,7 +52,8 @@ public class MainWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 416, 226);
+		frame.setType(Type.UTILITY);
+		frame.setBounds(100, 100, 360, 306);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -69,5 +74,17 @@ public class MainWindow {
 		pwdPassword.setText("password");
 		pwdPassword.setBounds(15, 111, 316, 43);
 		frame.getContentPane().add(pwdPassword);
+		
+		JButton btnNewButton = new JButton("OK");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton.setBounds(25, 183, 143, 29);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton button = new JButton("Cancel");
+		button.setBounds(173, 183, 143, 29);
+		frame.getContentPane().add(button);
 	}
 }
